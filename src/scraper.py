@@ -6,7 +6,7 @@ import os
 # Load environment variables once
 
 api_id =27766028 
-api_hash =a0a5c47fd7d5405d8e74dce6619d5adb
+api_hash ='a0a5c47fd7d5405d8e74dce6619d5adb'
 phone = +251935448251
 
 # Function to scrape data from a single channel
@@ -41,11 +41,16 @@ async def main():
         writer.writerow(['Channel Title', 'Channel Username', 'ID', 'Message', 'Date', 'Media Path'])  # Include channel title in the header
         
         # List of channels to scrape
-        channels = [
-            '@Shageronlinestore',  # Existing channel
+        channels = ["DoctorsET",
+      "lobelia4cosmetics",
+      "yetenaweg",
+       "EAHCI"]
+           
+                
+             # Existing channel
                  # You can add more channels here
             
-        ]
+    
         
         # Iterate over channels and scrape data into the single CSV file
         for channel in channels:
