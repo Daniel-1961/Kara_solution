@@ -1,0 +1,26 @@
+[0m20:26:53.666020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F6D37D400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F6B4E8F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026F6DFBA5D0>]}
+
+
+============================== 20:26:53.682552 | bb6eabec-1e74-4e1b-9039-ec11737f51c0 ==============================
+[0m20:26:53.682552 [info ] [MainThread]: Running with dbt=1.9.2
+[0m20:26:53.685349 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init my_project', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:26:53.763661 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/lenovo/.dbt')}
+[0m20:26:53.766376 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m20:26:53.774213 [debug] [MainThread]: Starter project path: C:\Users\lenovo\OneDrive\Desktop\10Academy Files\week7_project\Kara_solution-1\week7\Lib\site-packages\dbt\include\starter_project
+[0m20:26:53.868391 [info ] [MainThread]: 
+Your new dbt project "my_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:26:53.873979 [info ] [MainThread]: Setting up your profile.
