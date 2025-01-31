@@ -1,2 +1,4 @@
 data/
-.env/
+.env
+cleaned_telegram_data.csv
+

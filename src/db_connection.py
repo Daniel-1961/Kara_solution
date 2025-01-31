@@ -21,7 +21,7 @@ logging.basicConfig(
 DB_HOST = 'localhost'
 DB_NAME ='telegram_scrap'
 DB_USER = 'postgres'
-DB_PASSWORD = 1961
+DB_PASSWORD = 1517
 DB_PORT = 5432
 
 def get_db_connection():
