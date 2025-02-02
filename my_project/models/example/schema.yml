@@ -1,21 +1,26 @@
-
 version: 2
 
-models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
-
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+sources:
+  - name: staging
+    database: telegram_scrap
+    schema: public
+    tables:
+      - name:telegram_messages
+        description: "Raw data scraped from Telegram channels"
+        columns:
+          - name: channel_title
+            description: "Titile of telegram channels"
+          - name: channel_username
+            description: "Unique username for each channel"
+          - name: message_id
+            description: "unique ID for each messages"
+          - name: message
+            description: "contents in the message"
+          - name: message_date
+            description: "datetime for the messages put"
+          - name: media_path
+            description: "if any media in the messages"
+          - name: emoji_used
+            description: "emojis if any and 'no emoji' if the isny any"
+          - name: youtube_links
+            description: "links if any of youtube, 'no link' is there isnt any"
