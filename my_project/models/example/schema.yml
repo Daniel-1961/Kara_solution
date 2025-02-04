@@ -1,21 +1,58 @@
-
 version: 2
 
-models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+sources:
+  - name: staging
+    database: telegram_scrap
+    schema: public
+    tables:
+      - name: telegram_messages
+        description: "Raw data scraped from Telegram channels"
+        columns:
+          - name: channel_title
+            description: "Title of the telegram channel"
+            tests:
+              - not_null  # Ensure no NULL values in channel_title
+          - name: channel_username
+            description: "Unique username for each telegram channel"
+            tests:
+              - not_null  # Ensure no NULL values in channel_username
+          - name: message_id
+            description: "Unique identifier for each message"
+            tests:
+              - not_null  # Ensure no NULL values in message_id
+          - name: message
+            description: "Contents of the telegram message"
+            tests:
+              - not_null  # Ensure that message has no NULL values
+          - name: message_date
+            description: "Datetime when the message was posted"
+            tests:
+              - not_null  # Ensure no NULL values in message_date
+              - accepted_values:
+                  values: ["2023-01-01", "2023-01-02", "2023-01-03"]  # Only allow certain values (just an example, typically for categorical values)
+          - name: media_path
+            description: "Path to any media attached to the message, if present"
+          - name: emoji_used
+            description: "Emojis used in the message, or 'no emoji' if no emoji"
+          - name: youtube_links
+            description: "YouTube links, or 'no link' if no link is provided"
+            
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+models:
+    - name: my_first_dbt_model
+      description: "Transformed model containing telegram message data filtered for the last 30 days"
+      columns:
+        - name: channel_title
+          description: "Title of the telegram channel"
+        - name: message_id
+          description: "Unique identifier for each message"
+        - name: message
+          description: "Contents of the telegram message"
+        - name: message_date
+          description: "Datetime when the message was posted"
+        - name: media_path
+          description: "Path to media attached to the message (if any)"
+        - name: emoji_used
+          description: "Emojis used in the message (if any)"
+        - name: youtube_links
+          description: "YouTube links in the message (if any)"

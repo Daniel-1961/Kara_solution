@@ -1,0 +1,12 @@
+my_project:  # Must match the profile name in dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: postgres  # Change this if using Snowflake, BigQuery, etc.
+      host: 'localhost' # Replace with your actual database host
+      user: 'postgres'
+      password: '1517'
+      port: 5432
+      dbname: 'telegram_scrap'
+      schema: 'public'
+      threads: 4
