@@ -30,4 +30,3 @@ SELECT
     youtube_links
 FROM raw_data
 WHERE message_date > now() - INTERVAL '450 days'
-
