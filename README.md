@@ -1,5 +1,7 @@
 Ethiopian Medical Businesses Data Warehouse
+
 Project OverviewThis project is designed to detect medical tools from images shared in the Chemed Telegram Channel. 
+
 The pipeline consists of five main components:
 
 1.Telegram Scraping: Collects images from Telegram channels.
