@@ -1,27 +1,13 @@
 Ethiopian Medical Businesses Data Warehouse
+Project OverviewThis project is designed to detect medical tools from images shared in the Chemed Telegram Channel. 
+The pipeline consists of five main components:
 
-Project Overview
+1.Telegram Scraping: Collects images from Telegram channels.
 
-This project involves creating a data warehouse to store and analyze data scraped from various online sources, including Telegram channels, related to Ethiopian medical businesses. The purpose is to centralize medical business data for analysis, reporting, and decision-making purposes.
+2.Storing Data in PostgreSQL: Organizes and stores scraped image data in a PostgreSQL database.
 
-Project Objectives
+3.DBT (Data Build Tool) Transformation: Processes and transforms stored data for efficient querying.
 
-Data Collection: Scrape data from multiple online sources (websites, Telegram).
-Data Processing: Cleanse, transform, and structure the data for easy analysis.
-Data Storage: Build a scalable data warehouse to store the collected data.
-Data Analysis: Enable data analysis and generate insights on Ethiopian medical businesses.
-Technologies Used.
+4.Image Detection using YOLO: Identifies and classifies medical tools in images.
 
-This project further focuses on object detection using the YOLO (You Only Look Once) model to identify and analyze medical tools from images sourced from the Chemed Telegram Channel. 
-
-Additionally, an API is developed to facilitate data retrieval and interaction with the detection system. The extracted data is stored in a PostgreSQL database for further analysis and retrieval.
-
-Web Scraping:python
-
-Data Warehouse: PostgreSQL
-
-Features Image Scraping & Preprocessing: Images are scraped from Telegram channels and stored in a structured format.
-
-Object Detection: YOLO is used to detect and classify medical tools in images.
-
-Logging & Monitoring: The pipeline includes logging to track processing steps and errors.
+5.API Development with FastAPI: Provides an interface to interact with processed data and detection results.
